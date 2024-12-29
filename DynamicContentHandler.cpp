@@ -1,16 +1,4 @@
-#include <ctime>
-#include <string>
-#include <iostream>
-
-class echoServer {
-public:
-    void HandleMessage(Connection conn, std::string& message);
-
-private:
-    bool isDynamicRequest(const std::string& message);
-    std::string generateDynamicContent(const std::string& request);
-};
-
+#include"DynamicContentHandler.h"
 bool echoServer::isDynamicRequest(const std::string& message) {
     // 判断是否是动态请求
     return message.find("/api/") == 0 || message.find(".cgi") != std::string::npos;
