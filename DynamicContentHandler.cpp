@@ -64,9 +64,7 @@ void echoServer::HandleMessage(std::shared_ptr<Connection> conn, std::string& me
     }
 }
 
-// 模拟的Connection类实现
 void Connection::send(const std::string& data, size_t length) {
-    // 简单输出模拟发送
     std::cout << "Sending Response (" << length << " bytes):\n" << data << std::endl;
 }
 
