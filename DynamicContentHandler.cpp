@@ -1,4 +1,5 @@
-#include"DynamicContentHandler.h"
+#include "DynamicContentHandler.h"
+
 bool echoServer::isDynamicRequest(const std::string& message) {
     // 判断是否是动态请求
     return message.find("/api/") == 0 || message.find(".cgi") != std::string::npos;
